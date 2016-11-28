@@ -7,3 +7,8 @@ build:
 	ld -o main main.o
 run:
 	./main
+debug:
+	nasm -f elf64 -o main.o -g main.asm
+	ld -o main-d main.o
+gdb:
+	gdb main-d
